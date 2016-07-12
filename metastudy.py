@@ -11,7 +11,7 @@ def logPrior(mu,tau_sqr):
 	log_pri = -math.log(1000.0) - math.log(tau_sqr) - (0.5*math.log(2*math.pi)) - (0.9*math.log(1.0/tau_sqr)) - (0.5* (mu**2.0)/((1000.0*tau_sqr)**2.0)) - (.1/tau_sqr)
 	return log_pri
 
-# function for the lof of the likelihood 
+# function for the log of the likelihood 
 def logLikelihood(psi_hat,sigma,mu,tau_sqr):
 	n = len(psi_hat)
 	log_l = np.zeros((n,1))
